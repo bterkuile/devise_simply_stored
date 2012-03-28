@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = DeviseSimplyStored::VERSION
   s.authors     = ["Benjamin ter Kuile"]
   s.email       = ["bterkuile@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/bterkuile/devise_simply_stored"
   s.summary     = %q{This gem enables devise for simply_stored}
   s.description = %q{This gem enables devise for simply_stored}
 
