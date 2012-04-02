@@ -2,7 +2,7 @@
 add it to your Gemfile:
   gem 'devise_simply_stored'
 
-to your devise config (devise.rb)
+to use in your model:
   class User
     include SimplyStored::Couch
     include Devise::Orm::SimplyStored
