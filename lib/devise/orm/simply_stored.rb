@@ -36,6 +36,17 @@ module Devise
           type = Fixnum if type == Integer
           property name, { :type => type }.merge!(options)
         end
+
+        def devise_modules_hook!
+          yield
+          # Apply schema to model
+          devise_modules.each do |m|
+            send(m)
+          end
+          Devise.authentication_keys.each do |key|
+            property key
+          end
+        end
       end
     end
   end
