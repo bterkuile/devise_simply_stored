@@ -2,6 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 Bundler.require
 require 'devise_simply_stored'
+require 'pry'
 
 # SETUP devise. Important to do before loading models
 Devise.setup do |config|

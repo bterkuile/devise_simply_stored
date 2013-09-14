@@ -35,11 +35,6 @@ describe User do
     end
   end
   describe :rememberable do
-    it "should add remember_token correctly" do
-      property = User.properties.find{|p| p.name == :remember_token }
-      property.should_not be_nil
-      property.type.should == String
-    end
     it "should add remember_created_at correctly" do
       property = User.properties.find{|p| p.name == :remember_created_at }
       property.should_not be_nil
@@ -47,18 +42,22 @@ describe User do
     end
   end
 
-  describe :rememberable do
+  describe :recoverable do
+
     it "should add reset_password_token correctly" do
       property = User.properties.find{|p| p.name == :reset_password_token }
       property.should_not be_nil
       property.type.should == String
     end
+
     it "should add reset_password_sent_at correctly" do
       property = User.properties.find{|p| p.name == :reset_password_sent_at }
       property.should_not be_nil
       property.type.should == Time
     end
+
   end
+
   describe :trackable do
     it "should add sign_in_count correctly" do
       property = User.properties.find{|p| p.name == :sign_in_count}

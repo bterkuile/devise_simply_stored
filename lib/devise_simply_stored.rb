@@ -1,9 +1,9 @@
 
 require "devise_simply_stored/version"
 #begin
-  #require 'devise/orm/simply_stored'
+  require 'devise/orm/simply_stored'
 #rescue
-  require 'orm_adapter/adapters/simply_stored'
+#  require 'orm_adapter/adapters/simply_stored'
 #end
 
 # Initialize the module

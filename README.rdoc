@@ -5,13 +5,23 @@ add it to your Gemfile:
 to use in your model:
   class User
     include SimplyStored::Couch
-    include Devise::Orm::SimplyStored
 
     devise :database_authenticatable, :registerable,
            :recoverable, :rememberable, :trackable, :validatable
 
   end
 
+== Devise version warning!!
+devise_simply_stored up till 0.0.3 works with devise 2.0.4. Since version 0.1.0 it is tested against devise 3.1.0. This is 
+breaking upgrade since devise has changed a lot since this version.
+A typical Gemfile from version 0.1.0 looks like:
+  gem 'couch_potato' , github: 'bterkuile/couch_potato'
+  gem 'simply_stored' , github: 'bterkuile/simply_stored'
+  gem 'orm_adapter', github: 'bterkuile/orm_adapter'
+  gem 'devise', '>= 3.1.0'
+  gem 'devise_simply_stored' '>= 0.1.0'
+
+Note that orm_adapter is a modified version
 
 == Note on Patches/Pull Requests
  
