@@ -45,9 +45,3 @@ module SimplyStored::DeviseSchema
     end
   end
 end
-SimplyStored::Couch::ClassMethods.send :include, SimplyStored::DeviseSchema
-module SimplyStored::Couch
-  def [](val)
-    attributes[val]
-  end
-end

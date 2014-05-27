@@ -1,10 +1,7 @@
 
 require "devise_simply_stored/version"
-#begin
-  require 'devise/orm/simply_stored'
-#rescue
-#  require 'orm_adapter/adapters/simply_stored'
-#end
+require 'orm_adapter/adapters/simply_stored'
+require 'devise/orm/simply_stored'
 
 # Initialize the module
 module DeviseSimplyStored
