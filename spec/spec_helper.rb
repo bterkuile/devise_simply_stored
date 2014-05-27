@@ -1,12 +1,12 @@
 require 'rubygems'
 require 'bundler/setup'
-Bundler.require
 require 'devise_simply_stored'
+Bundler.require
 require 'pry'
 
 # SETUP devise. Important to do before loading models
 Devise.setup do |config|
-  config.stretches = 10
+  config.stretches = 1
   config.case_insensitive_keys = [ :email ]
   config.reset_password_within = 2.hours
 end

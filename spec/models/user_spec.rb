@@ -12,7 +12,7 @@ describe User do
   describe 'accessing attributes' do
     it "should access attributes through [] on record" do
       @user.email = 'test@example.com'
-      @user[:email].should == 'test@example.com' 
+      @user[:email].should == 'test@example.com'
     end
   end
   describe :database_authenticatable do
