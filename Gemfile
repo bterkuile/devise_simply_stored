@@ -3,8 +3,8 @@ source :rubygems
 gemspec
 
 gem 'rails'
-gem 'couch_potato' , github: 'bterkuile/couch_potato'
-gem 'simply_stored' , github: 'bterkuile/simply_stored'
+gem 'simply_stored' , github: 'bterkuile/simply_stored', branch: :master
+gem 'couch_potato' # , github: 'bterkuile/couch_potato', branch: :master
 gem 'devise'
 
 group :test do

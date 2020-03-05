@@ -62,7 +62,7 @@ describe User do
     it "should add sign_in_count correctly" do
       property = User.properties.find{|p| p.name == :sign_in_count}
       property.should_not be_nil
-      property.type.should == Fixnum
+      property.type.should == Integer
     end
     it "should add current_sign_in_at correctly" do
       property = User.properties.find{|p| p.name == :current_sign_in_at }

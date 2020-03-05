@@ -14,7 +14,7 @@ module SimplyStored::DeviseSchema
       property :remember_created_at, type: Time
     },
     trackable: ->{
-      property :sign_in_count,      type: Fixnum, default: 0
+      property :sign_in_count,      type: Integer, default: 0
       property :current_sign_in_at, type: Time
       property :last_sign_in_at,    type: Time
       property :current_sign_in_ip, type: String
@@ -27,7 +27,7 @@ module SimplyStored::DeviseSchema
       property :unconfirmed_email,    type: String # Only if using reconfirmable
     },
     locable: ->{
-      property :failed_attempts, type: Fixnum, default: 0 # Only if lock strategy is :failed_attempts
+      property :failed_attempts, type: Integer, default: 0 # Only if lock strategy is :failed_attempts
       property :unlock_token,    type: String # Only if unlock strategy is :email or :both
       property :locked_at,       type: Time
     }
